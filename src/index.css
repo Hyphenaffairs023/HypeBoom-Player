@@ -1,0 +1,192 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-brand: "Syne", "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-sans: "DM Sans", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+:root,
+html[data-theme="light"] {
+  --th-bg: #ebe4d8;
+  --th-bg-image: radial-gradient(950px circle at 10% 8%, rgba(232, 90, 42, 0.16), transparent 54%), radial-gradient(850px circle at 90% 88%, rgba(217, 155, 67, 0.2), transparent 56%), linear-gradient(135deg, #efe8dc 0%, #e4dccb 55%, #ead8cc 100%);
+  --th-surface: #f5efe4;
+  --th-surface-alt: #e6ddd0;
+  --th-surface-hover: rgba(20, 21, 24, 0.05);
+  --th-border: rgba(20, 21, 24, 0.1);
+  --th-text: #161513;
+  --th-text-muted: #5d5952;
+  --th-accent: #e85a2a;
+  --th-accent-hover: #d44e20;
+  --th-accent-fg: #ffffff;
+  --th-accent-text: #c9461a;
+  --th-accent-soft: rgba(232, 90, 42, 0.13);
+}
+
+html[data-theme="dark"] {
+  --th-bg: #101116;
+  --th-bg-image: radial-gradient(950px circle at 12% 10%, rgba(232, 90, 42, 0.16), transparent 52%), radial-gradient(850px circle at 88% 88%, rgba(99, 102, 241, 0.14), transparent 56%), linear-gradient(145deg, #101116 0%, #16131a 55%, #12151e 100%);
+  --th-surface: #181a22;
+  --th-surface-alt: #12141a;
+  --th-surface-hover: rgba(255, 255, 255, 0.05);
+  --th-border: rgba(255, 255, 255, 0.085);
+  --th-text: #f2f2ef;
+  --th-text-muted: #9397a3;
+  --th-accent: #e85a2a;
+  --th-accent-hover: #d44e20;
+  --th-accent-fg: #ffffff;
+  --th-accent-text: #e85a2a;
+  --th-accent-soft: rgba(232, 90, 42, 0.15);
+}
+
+html[data-theme="graphite"] {
+  --th-bg: #1d2128;
+  --th-bg-image: radial-gradient(950px circle at 15% 10%, rgba(148, 163, 184, 0.16), transparent 54%), radial-gradient(850px circle at 86% 86%, rgba(56, 189, 248, 0.12), transparent 56%), linear-gradient(145deg, #1d2128 0%, #242934 55%, #1f2630 100%);
+  --th-surface: #272c36;
+  --th-surface-alt: #1c2028;
+  --th-surface-hover: rgba(255, 255, 255, 0.06);
+  --th-border: rgba(255, 255, 255, 0.11);
+  --th-text: #eceef2;
+  --th-text-muted: #9ca4b3;
+  --th-accent: #cbd5e1;
+  --th-accent-hover: #e2e8f0;
+  --th-accent-fg: #181b20;
+  --th-accent-text: #e2e8f0;
+  --th-accent-soft: rgba(203, 213, 225, 0.16);
+}
+
+html[data-theme="rose"] {
+  --th-bg: #f6d5e4;
+  --th-bg-image: radial-gradient(950px circle at 10% 10%, rgba(244, 114, 182, 0.34), transparent 54%), radial-gradient(900px circle at 88% 84%, rgba(251, 146, 60, 0.22), transparent 56%), linear-gradient(135deg, #fbe2ee 0%, #f5cfe1 52%, #f8dad3 100%);
+  --th-surface: #fae8f0;
+  --th-surface-alt: #f2d3e2;
+  --th-surface-hover: rgba(190, 24, 93, 0.06);
+  --th-border: rgba(157, 23, 77, 0.13);
+  --th-text: #2c121d;
+  --th-text-muted: #78485d;
+  --th-accent: #db2777;
+  --th-accent-hover: #be185d;
+  --th-accent-fg: #ffffff;
+  --th-accent-text: #be185d;
+  --th-accent-soft: rgba(219, 39, 119, 0.13);
+}
+
+html[data-theme="lemon"] {
+  --th-bg: #f5ecad;
+  --th-bg-image: radial-gradient(950px circle at 12% 10%, rgba(250, 204, 21, 0.35), transparent 54%), radial-gradient(900px circle at 88% 86%, rgba(132, 204, 22, 0.22), transparent 56%), linear-gradient(135deg, #fcf4bf 0%, #f5ea9f 52%, #e9f2ba 100%);
+  --th-surface: #fbf5d2;
+  --th-surface-alt: #f0e49e;
+  --th-surface-hover: rgba(161, 98, 7, 0.07);
+  --th-border: rgba(133, 77, 14, 0.15);
+  --th-text: #1f1f12;
+  --th-text-muted: #66623b;
+  --th-accent: #eab308;
+  --th-accent-hover: #ca8a04;
+  --th-accent-fg: #1a1a0e;
+  --th-accent-text: #9a5b05;
+  --th-accent-soft: rgba(234, 179, 8, 0.2);
+}
+
+html[data-theme="sky"] {
+  --th-bg: #d1e7fd;
+  --th-bg-image: radial-gradient(950px circle at 12% 10%, rgba(56, 189, 248, 0.34), transparent 54%), radial-gradient(900px circle at 88% 85%, rgba(129, 140, 248, 0.24), transparent 56%), linear-gradient(135deg, #deeffe 0%, #cde4fc 52%, #d8dffb 100%);
+  --th-surface: #e7f2fe;
+  --th-surface-alt: #d2e6fc;
+  --th-surface-hover: rgba(2, 132, 199, 0.07);
+  --th-border: rgba(3, 105, 161, 0.14);
+  --th-text: #0f1d2e;
+  --th-text-muted: #49617b;
+  --th-accent: #0284c7;
+  --th-accent-hover: #0369a1;
+  --th-accent-fg: #ffffff;
+  --th-accent-text: #0369a1;
+  --th-accent-soft: rgba(2, 132, 199, 0.13);
+}
+
+@layer base {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-x: clip;
+    font-family: var(--font-sans);
+    background-color: var(--th-bg);
+    background-image: var(--th-bg-image);
+    background-attachment: fixed;
+    color: var(--th-text);
+  }
+}
+
+.theme-canvas-bg {
+  background-color: var(--th-bg);
+  background-image: var(--th-bg-image);
+  background-attachment: fixed;
+}
+
+/* Custom studio range inputs */
+input[type="range"].studio-range {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="range"].studio-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 9999px;
+  background: var(--th-accent);
+  border: 2px solid var(--th-surface);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+  transition: transform 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+input[type="range"].studio-range:hover::-webkit-slider-thumb,
+input[type="range"].studio-range:focus-visible::-webkit-slider-thumb {
+  transform: scale(1.2);
+}
+
+input[type="range"].studio-range::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 9999px;
+  background: var(--th-accent);
+  border: 2px solid var(--th-surface);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+@keyframes eq-bar {
+  0%,
+  100% {
+    transform: scaleY(0.32);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.animate-eq-1 {
+  animation: eq-bar 0.78s ease-in-out infinite;
+  transform-origin: bottom;
+}
+.animate-eq-2 {
+  animation: eq-bar 0.62s ease-in-out 0.15s infinite;
+  transform-origin: bottom;
+}
+.animate-eq-3 {
+  animation: eq-bar 0.86s ease-in-out 0.3s infinite;
+  transform-origin: bottom;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-eq-1,
+  .animate-eq-2,
+  .animate-eq-3 {
+    animation: none;
+    transform: scaleY(0.7);
+  }
+}

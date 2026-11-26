@@ -1,0 +1,6 @@
+{
+  "name": "Koto",
+  "description": "A clean, tactile music player with built-in ambient compositions, real-time spectrum visualization, and local audio playback.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

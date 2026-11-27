@@ -1,0 +1,9 @@
+{
+  "appId": "com.hypeboom.player",
+  "appName": "HypeBoom",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "android": {
+    "allowMixedContent": true
+  }
+}

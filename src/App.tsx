@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Upload } from 'lucide-react';
 import { BrandMark } from './components/BrandMark';
+import { OfflineIndicator, PWAInstallButton } from './components/PWAInstallButton';
 import { PlayerStage } from './components/PlayerStage';
 import { TrackQueue } from './components/TrackQueue';
 import { THEME_OPTIONS } from './data/themes';
@@ -241,8 +242,9 @@ export default function App() {
 
       {/* Top Bar: Unique HypeBoom Brand Identity */}
       <header className="w-full border-b border-[var(--th-border)] bg-[var(--th-surface)]/85 backdrop-blur-md">
-        <div className="w-full max-w-6xl mx-auto px-3 sm:px-6 lg:px-8 h-14 sm:h-16 flex items-center justify-between">
+        <div className="w-full max-w-6xl mx-auto px-3 sm:px-6 lg:px-8 h-14 sm:h-16 flex items-center justify-between gap-4">
           <BrandMark isPlaying={isPlaying} />
+          <PWAInstallButton />
         </div>
       </header>
 
@@ -379,6 +381,8 @@ export default function App() {
           </div>
         </div>
       </footer>
+
+      <OfflineIndicator />
     </div>
   );
 }
